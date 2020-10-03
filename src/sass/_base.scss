@@ -84,6 +84,18 @@
     left: 0;
     bottom: 0;
 }
+@mixin borderT{
+    border-top: 1px solid #000;
+}
+@mixin borderR{
+    border-right: 1px solid #000;
+}
+@mixin borderB{
+    border-bottom: 1px solid #000;
+}
+@mixin borderL{
+    border-left: 1px solid #000;
+}
 .full{
     position: absolute;
     top: 0;

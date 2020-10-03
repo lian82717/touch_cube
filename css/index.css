@@ -90,16 +90,23 @@ body {
   font-size: 36px; }
 
 .maze_wrap {
+  position: absolute;
+  top: 0;
+  right: auto;
+  left: 0;
+  bottom: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 780px;
-  height: 100vh;
   margin: 0 auto;
   display: flex;
-  align-items: center; }
-  .maze_wrap .sq {
+  align-items: center;
+  flex-wrap: wrap; }
+  .maze_wrap .cube {
     width: 156px;
     height: 156px;
-    border: 1px solid #000000;
     box-sizing: border-box;
     background-color: #845; }
-    .maze_wrap .sq.active {
-      background-color: #845; }
+    .maze_wrap .cube[is-touch="true"] {
+      background-color: #FFF; }

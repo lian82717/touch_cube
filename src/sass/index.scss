@@ -13,19 +13,91 @@ body{
     font-size: 36px;
 }
 .maze_wrap{
+    @include atl;
+    @include center;
     width: 780px;
-    height: 100vh;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    .sq{
+    flex-wrap: wrap;
+    .cube{
         width: (780px/5);
         height: (780px/5);
-        border: 1px solid #000000;
         box-sizing: border-box;
         background-color: #845;
-        &.active{
-            background-color: #845;
+        &[is-touch="true"]{
+            background-color: #FFF;
         }
+        // &:nth-child(n+5){
+        //     margin-top: -1px;
+        // }
     }
 }
+
+// .cube[maze-id="0"]{
+//     @include borderT;
+//     @include borderR;
+//     @include borderB;
+//     @include borderL;
+// }
+// .cube[maze-id="1"]{
+//     @include borderR;
+//     @include borderB;
+//     @include borderL;
+// }
+// .cube[maze-id="2"]{
+//     @include borderT;
+//     @include borderB;
+//     @include borderL;
+// }
+// .cube[maze-id="3"]{
+//     @include borderB;
+//     @include borderL;
+// }
+// .cube[maze-id="4"]{
+//     @include borderT;
+//     @include borderR;
+//     @include borderL;
+// }
+// .cube[maze-id="5"]{
+//     @include borderR;
+//     @include borderL;
+// }
+// .cube[maze-id="6"]{
+//     @include borderT;
+//     @include borderL;
+// }
+// .cube[maze-id="7"]{
+//     @include borderL;
+// }
+// .cube[maze-id="0"]{
+//     @include borderT;
+//     @include borderR;
+//     @include borderB;
+//     @include borderL;
+// }
+// .cube[maze-id="8"]{
+//     @include borderT;
+//     @include borderR;
+//     @include borderB;
+// }
+// .cube[maze-id="9"]{
+//     @include borderR;
+//     @include borderB;
+// }
+// .cube[maze-id="10"]{
+//     @include borderT;
+//     @include borderB;
+// }
+// .cube[maze-id="12"]{
+//     @include borderT;
+//     @include borderR;
+// }
+// .cube[maze-id="13"]{
+//     @include borderR;
+// }
+// .cube[maze-id="14"]{
+//     @include borderT;
+// }
+// .cube[maze-id="15"]{
+// }
