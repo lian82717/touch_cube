@@ -1,0 +1,31 @@
+@import '_reset.scss';
+@import '_base.scss';
+
+body{
+    background-color: #555555;
+}
+#console{
+    @include atl;
+    @include x_center;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+}
+.maze_wrap{
+    width: 780px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    .sq{
+        width: (780px/5);
+        height: (780px/5);
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        background-color: #845;
+        &.active{
+            background-color: #845;
+        }
+    }
+}

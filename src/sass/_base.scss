@@ -1,0 +1,118 @@
+@function fvw($a,$b){
+    @return ( $a / $b ) * 100vw;
+}
+@function fvh($a,$b){
+    @return ( $a / $b ) * 100vh;
+}
+@function fpct($a,$b){
+    @return ( $a / $b ) * 100%;
+}
+@mixin clear {
+    content: '';
+    display: block;
+    clear: both;
+}
+@mixin x_center{
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin y_center{
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin center{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin center_reset{
+    transform: none;
+}
+@mixin atr {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+}
+@mixin atl {
+    position: absolute;
+    top: 0;
+    right: auto;
+    left: 0;
+    bottom: auto;
+}
+@mixin abr {
+    position: absolute;
+    top: auto;
+    right: 0;
+    left: auto;
+    bottom: 0;
+}
+@mixin abl {
+    position: absolute;
+    top: auto;
+    right: auto;
+    left: 0;
+    bottom: 0;
+}
+@mixin ftr {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+}
+@mixin ftl {
+    position: fixed;
+    top: 0;
+    right: auto;
+    left: 0;
+    bottom: auto;
+}
+@mixin fbr {
+    position: fixed;
+    top: auto;
+    right: 0;
+    left: auto;
+    bottom: 0;
+}
+@mixin fbl {
+    position: fixed;
+    top: auto;
+    right: auto;
+    left: 0;
+    bottom: 0;
+}
+.full{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.pc-only{
+    display: block;
+}
+.m-only{
+    display: none;
+}
+span.pc-only{
+    display: inline-block;
+}
+span.m-only{
+    display: none;
+}
+@media screen and(max-width: 979px){
+    .pc-only{
+        display: none;
+    }
+    .m-only{
+        display: block;
+    }
+    span.pc-only{
+        display: none;
+    }
+    span.m-only{
+        display: inline-block;
+    }
+}
