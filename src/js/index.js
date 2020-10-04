@@ -23,6 +23,7 @@ $('.cube[data-id="1"]').on('touchstart',function(){
 })
 
 $('.maze_wrap').on('touchstart',function (e) {
+    e.preventDefault();
     cord.x = e.touches[0].pageX
     cord.y = e.touches[0].pageY
     el = document.elementFromPoint(cord.x, cord.y)
@@ -30,6 +31,7 @@ $('.maze_wrap').on('touchstart',function (e) {
     move()
 })
 $('.maze_wrap').on('touchmove',function (e) {
+    e.preventDefault();
     cord.x = e.touches[0].pageX
     cord.y = e.touches[0].pageY
     el = document.elementFromPoint(cord.x, cord.y)
@@ -37,6 +39,7 @@ $('.maze_wrap').on('touchmove',function (e) {
     move()
 })
 $('.maze_wrap').on('touchend',function (e) {
+    e.preventDefault();
     cord.x = e.changedTouches[0].pageX
     cord.y = e.changedTouches[0].pageY
     el = document.elementFromPoint(cord.x, cord.y)

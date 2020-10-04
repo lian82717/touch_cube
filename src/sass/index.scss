@@ -15,89 +15,126 @@ body{
 .maze_wrap{
     @include atl;
     @include center;
-    width: 780px;
+    width: 100vw;
     margin: 0 auto;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     .cube{
-        width: (780px/5);
-        height: (780px/5);
+        position: relative;
+        width: (100vw/5);
+        height: (100vw/5);
         box-sizing: border-box;
         background-color: #845;
         &[is-touch="true"]{
             background-color: #FFF;
         }
-        // &:nth-child(n+5){
-        //     margin-top: -1px;
-        // }
+        &:after{
+            content: '';
+            @include atl;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
-// .cube[maze-id="0"]{
-//     @include borderT;
-//     @include borderR;
-//     @include borderB;
-//     @include borderL;
-// }
-// .cube[maze-id="1"]{
-//     @include borderR;
-//     @include borderB;
-//     @include borderL;
-// }
-// .cube[maze-id="2"]{
-//     @include borderT;
-//     @include borderB;
-//     @include borderL;
-// }
-// .cube[maze-id="3"]{
-//     @include borderB;
-//     @include borderL;
-// }
-// .cube[maze-id="4"]{
-//     @include borderT;
-//     @include borderR;
-//     @include borderL;
-// }
-// .cube[maze-id="5"]{
-//     @include borderR;
-//     @include borderL;
-// }
-// .cube[maze-id="6"]{
-//     @include borderT;
-//     @include borderL;
-// }
-// .cube[maze-id="7"]{
-//     @include borderL;
-// }
-// .cube[maze-id="0"]{
-//     @include borderT;
-//     @include borderR;
-//     @include borderB;
-//     @include borderL;
-// }
-// .cube[maze-id="8"]{
-//     @include borderT;
-//     @include borderR;
-//     @include borderB;
-// }
-// .cube[maze-id="9"]{
-//     @include borderR;
-//     @include borderB;
-// }
-// .cube[maze-id="10"]{
-//     @include borderT;
-//     @include borderB;
-// }
-// .cube[maze-id="12"]{
-//     @include borderT;
-//     @include borderR;
-// }
-// .cube[maze-id="13"]{
-//     @include borderR;
-// }
-// .cube[maze-id="14"]{
-//     @include borderT;
-// }
-// .cube[maze-id="15"]{
-// }
+.cube[maze-id="0"]{
+    &:after{
+        @include borderT;
+        @include borderR;
+        @include borderB;
+        @include borderL;
+    }
+}
+.cube[maze-id="1"]{
+    &:after{
+        @include borderR;
+        @include borderB;
+        @include borderL;
+    }
+}
+.cube[maze-id="2"]{
+        &:after{
+        @include borderT;
+        @include borderB;
+        @include borderL;
+    }
+}
+.cube[maze-id="3"]{
+        &:after{
+        @include borderB;
+        @include borderL;
+    }
+}
+.cube[maze-id="4"]{
+        &:after{
+        @include borderT;
+        @include borderR;
+        @include borderL;
+    }
+}
+.cube[maze-id="5"]{
+        &:after{
+        @include borderR;
+        @include borderL;
+    }
+}
+.cube[maze-id="6"]{
+    &:after{
+        @include borderT;
+        @include borderL;
+    }
+}
+.cube[maze-id="7"]{
+    &:after{
+        @include borderL;
+    }
+}
+.cube[maze-id="0"]{
+    &:after{
+        @include borderT;
+        @include borderR;
+        @include borderB;
+        @include borderL;
+    }
+}
+.cube[maze-id="8"]{
+    &:after{
+        @include borderT;
+        @include borderR;
+        @include borderB;
+    }
+}
+.cube[maze-id="9"]{
+    &:after{
+        @include borderR;
+        @include borderB;
+    }
+}
+.cube[maze-id="10"]{
+    &:after{
+        @include borderT;
+        @include borderB;
+    }
+}
+.cube[maze-id="12"]{
+    &:after{
+        @include borderT;
+        @include borderR;
+    }
+}
+.cube[maze-id="13"]{
+    &:after{
+        @include borderR;
+    }
+}
+.cube[maze-id="14"]{
+    &:after{
+        @include borderT;
+    }
+}
+.cube[maze-id="15"]{
+    &:after{
+    }
+}
